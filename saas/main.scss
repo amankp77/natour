@@ -11,20 +11,5 @@
 
 @import "pages/home";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  //this defines what 1rem is root font size
-  font-size: 62.5%;
-}
-
-
-
-body {
-  box-sizing: border-box;
-}
-
+@import "layout/headers";
+@import "layout/grid";
