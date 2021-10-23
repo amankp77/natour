@@ -1,14 +1,9 @@
 
 .btn {
-    &:hover {
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-    }
-  
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    }
+
+
+    @include btn-hover(#fff , #777);
+    @include btn-active;
   
     &-white {
       background-color: white;
@@ -49,8 +44,25 @@
   transition: all 0.4 ease-in;
   position: relative;
   animation: moveUp 1s 1s backwards;
-  font-size: 1.6rem;
+  font-size: $default-fontsize;
 }
   }
  
   
+.btn-text{
+  &:link,&:visited{
+        font-size: $default-fontsize;
+        color: $color-primary-light;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary-light;
+        transition: all .2s;
+        padding: 0px .3rem;
+  }
+  
+   @include btn-hover($color-primary-light , #fff);
+   @include btn-active;
+
+  
+
+}

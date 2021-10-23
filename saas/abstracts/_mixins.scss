@@ -1,3 +1,21 @@
+@mixin btn-hover($backc , $col){
+    &:hover{
+    background-color: $backc;
+    color: $col;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+}
+
+
+@mixin btn-active {
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+      }
+    
+}
+
 @mixin clearfix {
     &::after{
         content: "";
