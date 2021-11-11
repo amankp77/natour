@@ -2,14 +2,20 @@
 .btn {
 
 
-    @include btn-hover(#fff , #777);
+   
     @include btn-active;
   
     &-white {
+      @include btn-hover(#fff , #777);
       background-color: white;
       color: #777;
     }
-  
+    
+    &-green{
+      @include btn-hover($color-primary-medium, white);
+      background-color: $color-primary-medium;
+      color: white;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -27,6 +33,11 @@
       content: "";
       background-color: white;
     }
+    &-green::before {
+      content: "";
+      background-color: $color-primary-medium;
+    }
+
   
     &:hover::before {
       transform: scaleX(1.9) scaleY(1.7);
@@ -66,3 +77,4 @@
   
 
 }
+
