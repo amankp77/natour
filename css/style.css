@@ -79,13 +79,13 @@ body {
   margin-bottom: 8rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem !important; }
 
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
 .u-margin-bottom-legend {
-  margin-bottom: 10rem; }
+  margin-bottom: 10rem !important; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -133,7 +133,8 @@ body {
   transform: scaleX(1.9) scaleY(1.7);
   opacity: 0; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
+  border: none;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -183,7 +184,7 @@ body {
       top: 8rem;
       left: 37%; }
     .composition__photo--p3 {
-      top: 18rem;
+      top: 14rem;
       left: 10%; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
@@ -355,6 +356,80 @@ body {
     width: 100%;
     object-fit: cover; }
 
+.form__label {
+  font-size: 1.5rem;
+  display: block;
+  margin-left: 1.5rem;
+  margin-top: .7rem;
+  font-weight: 600;
+  transition: all .2s; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+.form__input {
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 80%;
+  display: block;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1); }
+  .form__input:focus {
+    border-bottom: 3px solid #7ed56f;
+    outline: none; }
+    .form__input:focus:valid {
+      border-bottom: 3px solid #7ed56f; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid orangered; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem); }
+
+.form__radio-group {
+  display: inline-block;
+  position: relative; }
+
+.form__radio-input {
+  display: none; }
+  .form__radio-input:checked ~ .form__radio-label > .form__radio-btn::after {
+    opacity: 1; }
+
+.form__radio-btn {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 6px solid #55c57a;
+  border-radius: 50%;
+  position: relative;
+  transform: translateY(0.7rem);
+  margin-right: .7rem; }
+  .form__radio-btn::after {
+    display: inline-block;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #55c57a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0; }
+
+.form__radio-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: .7rem; }
+
+.form__submit {
+  width: 100%; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 10rem 0; }
@@ -391,6 +466,20 @@ body {
 .section-stories {
   position: relative;
   padding: 5rem 15rem; }
+
+.section-booking {
+  height: 100vh;
+  padding: 10rem 15rem;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .section-booking .booking {
+    padding: 6rem 8rem;
+    height: 50rem;
+    background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.89) 50%, rgba(0, 0, 0, 0) 50%), url(/img/nat-10.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.2); }
+    .section-booking .booking .form {
+      width: 50%; }
 
 .header {
   height: 95vh;
@@ -453,3 +542,46 @@ body {
     content: "";
     display: table;
     clear: both; }
+
+.row .col-1-of-1 {
+  margin-left: -2rem;
+  margin-right: 60px !important; }
+
+.row .col-2-of-1 {
+  width: 40% !important; }
+
+.footer {
+  background-color: #2d2d2d;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  .footer__group {
+    display: inline;
+    list-style: none; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 4rem; }
+  .footer__logo {
+    width: 15rem; }
+  .footer__navigation {
+    border-top: 1px solid #999;
+    padding-top: 1.5rem;
+    padding-left: 3rem; }
+  .footer__copyright {
+    color: #999;
+    border-top: 1px solid #999;
+    padding-top: 1.5rem;
+    padding-left: .8rem; }
+  .footer__link:link, .footer__link:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    padding: 4px; }
+  .footer__link:hover, .footer__link:active {
+    color: #7ed56f;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: rotate(7deg) scale(1.2); }
+  .footer__list {
+    display: inline-block; }
+    .footer__list:not(:last-child) {
+      margin-right: 1.5rem; }
