@@ -108,6 +108,8 @@
         right: 2rem;
 
         &-span{
+        -webkit-box-decoration-break: clone;
+        -ms-box-decoration-break : clone;
         box-decoration-break: clone;
         padding:1rem 1.5rem;
         }

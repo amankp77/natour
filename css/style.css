@@ -282,6 +282,8 @@ body {
     top: 11rem;
     right: 2rem; }
     .card__heading-span {
+      -webkit-box-decoration-break: clone;
+      -ms-box-decoration-break: clone;
       box-decoration-break: clone;
       padding: 1rem 1.5rem; }
     .card__heading-1 {
@@ -628,11 +630,13 @@ body {
     width: 66.66666%;
     display: table-cell;
     vertical-align: middle;
-    padding: 1rem 3rem; }
+    padding: 1rem 3rem;
+    overflow: hidden; }
   .popup__left {
     width: 33.333333%;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    overflow: hidden; }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;
