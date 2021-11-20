@@ -78,6 +78,7 @@
         
         background-size: cover;
         height: 21rem;
+        -ms-background-blend-mode:screen;
         background-blend-mode: screen;
         &-1{
             background-image:linear-gradient(to right bottom , $color-secondary-light,$color-secondary-dark), url(../img/nat-5.jpg);

@@ -261,6 +261,7 @@ body {
   .card__picture {
     background-size: cover;
     height: 21rem;
+    -ms-background-blend-mode: screen;
     background-blend-mode: screen; }
     .card__picture-1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
