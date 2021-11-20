@@ -2,4 +2,3 @@ node_modules/
 *.json
 fonts/
 _test.scss
-_popup.scss
