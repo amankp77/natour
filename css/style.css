@@ -395,7 +395,7 @@ body {
       .card:hover .card__slide--front {
         transform: none; }
       .card:hover .card__slide--back {
-        transform: none; } }
+        transform: translateY(47rem) !important; } }
 
 .story {
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.1);

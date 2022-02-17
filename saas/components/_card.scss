@@ -207,12 +207,12 @@
     }
     
     &:hover  &__slide--front{
-        transform: none;
+        transform:none;
         
     }
 
     &:hover  &__slide--back{
-        transform: none;
+        transform:translateY(47rem) !important;
             
     }
 
