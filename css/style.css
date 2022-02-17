@@ -794,11 +794,19 @@ body {
     vertical-align: middle;
     padding: 1rem 3rem;
     overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        display: block;
+        width: 100%; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell;
     vertical-align: middle;
     overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        display: block;
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;
@@ -808,13 +816,17 @@ body {
   .popup__img {
     display: block;
     width: 100%; }
+    .popup__img:nth-child(2) {
+      display: none; }
   .popup__close, .popup__close:link, .popup__close:visited {
     font-size: 3rem;
     line-height: 1rem;
     position: fixed;
     top: 2rem;
     right: 2rem;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: white;
+    z-index: 100; }
     .popup__close:hover, .popup__close:link:hover, .popup__close:visited:hover {
       color: #7ed56f; }
 
