@@ -1,6 +1,21 @@
 .composition{
 
+
+
     position: relative;
+   
+    // @include respond(phone){
+    //     width: 100% !important;
+    // }
+
+    @include respond(tab-port){
+        height: 180px;
+    }
+
+    @include respond(phone){
+        height: 180px;
+        transform: scale(.7);
+    }
 
     &__photo{
         width: 55%;
@@ -19,20 +34,37 @@
         &--p1{
              top: 0;
              left: 0;
+             @include respond(tab-port){
+              
+          }
+            
          }
         &--p2{
              top: 8rem;
              left: 37%;
+
+             @include respond(tab-port){
+                
+
+          }
          }
         &--p3{
              top: 14rem;
              left: 10%;
+
+
+             @include respond(tab-port){
+                
+            }
          }
     }
 
     &:hover &__photo:not(:hover){
         transform: scale(.9);
     }
+
+
+   
     
     
 }

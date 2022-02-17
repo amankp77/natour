@@ -1,27 +1,18 @@
+
 .section-about{
     background-color: $color-grey-light;
     padding: 10rem 0;
-}
 
-.heading-secondary{
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3.5rem;
-    background-image: linear-gradient(to right bottom,$color-primary-light , $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: .2rem;
-    transition: all .3s;
-
-    &:hover{
-        transform: skewX(14deg) skewY(2deg) scale(1.2);
-        text-shadow: 1rem 1rem 2rem rgba($color: #000000, $alpha: .2);
-        letter-spacing: normal;
+    @include respond(tab-port){
+        padding: 2rem 0;
     }
 }
 
+
+
 .section-tours{
     position: relative;
+    
 }
 
 
@@ -39,28 +30,51 @@
       &>*{
           transform: skewY(7deg);
       }
+
+
+      @include respond(tab-port){
+          padding: 8rem 0;
+      }
 }
 
 
 .section-tours{
     background-color: $color-grey-light;
     padding: 5rem 0;
+    height: auto;
+
+
 }
 .section-stories{
     position: relative;
     padding: 5rem 15rem;
+    @include respond(tab-port){
+        padding: 5rem 10rem;
+    }
+    @include respond(phone){
+        padding: 2rem 5rem;
+    }
 }
 
 .section-booking{
-    height: 100vh;
+    height: auto;
     padding: 10rem 15rem;
     background-image: linear-gradient(to right bottom , $color-primary-light , $color-primary-dark);
-
+    @include respond(tab-port){
+        padding: 5rem 7rem;
+    }
     .booking{
 
       
        .form{
            width: 50%;
+
+           @include respond(tab-port){
+               width: 70%;
+           }
+           @include respond(phone){
+               width: 100%;
+           }
        }
         padding: 6rem 8rem;
         height: 50rem;
@@ -68,8 +82,30 @@
                                           rgba(white,.9) 0% ,
                                         rgba(255, 255, 255, 0.89) 50% , rgba(0, 0, 0, 0) 50%),
                                           url(../img/nat-10.jpg);
-        background-size: 100%;
+        background-size: cover;
         border-radius: 3px;
         box-shadow: 0 4rem 6rem rgba($color: #000000, $alpha: .2);
+
+        @include respond(tab-port){
+            padding: 2rem 6rem;
+        }
+
+        @include respond(tab-port){
+            background-image:linear-gradient(115deg,
+            rgba(white,.9) 0% ,
+          rgba(255, 255, 255, 0.89) 70% , rgba(0, 0, 0, 0) 70%),
+            url(../img/nat-10.jpg);
+        }
+        @include respond(phone){
+            background-image:linear-gradient(115deg,
+            rgba(white,.9) 0% ,
+          rgba(255, 255, 255, 0.89) 100% , rgba(0, 0, 0, 0) 100%),
+            url(../img/nat-10.jpg);
+        }
+    }
+
+
+    @include respond(tab-port){
+        height: auto;
     }
 }

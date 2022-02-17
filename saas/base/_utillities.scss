@@ -5,6 +5,10 @@
 
 .u-margin-bottom-big{
     margin-bottom: 8rem;
+
+    @include respond(phone){
+        margin-bottom: 4rem;
+    }
 }
 
 .u-margin-bottom-medium{
@@ -17,4 +21,11 @@
 
 .u-margin-bottom-legend {
     margin-bottom: 10rem !important;
+
+    @include respond(tab-port){
+        margin-bottom: 5rem !important;
+    }
+    @include respond(phone){
+        margin-bottom: 5rem !important;
+    }
 }

@@ -7,6 +7,12 @@
     background-color: white;
     // border: 2px solid red;
     transform: skewX(-12deg);
+
+    @include respond(phone){
+        transform: skewX(0deg) ;
+        width: 100%;
+        padding: 4rem 4rem;
+    }
    
     &:not(:last-child){
     margin-bottom: 7rem;
@@ -33,6 +39,11 @@
         shape-outside: circle(50% at 50% 50%);
         // margin-top: -5.1rem;
         position: relative;
+
+        @include respond(phone){
+           transform: skewX(0deg) translateX(-2rem);
+
+        }
 
 
 
@@ -63,7 +74,9 @@
 
     &__text{
         transform: skewX(12deg);
-        
+        @include respond(phone){
+            transform: skewX(0deg);
+        }
 
     }
 

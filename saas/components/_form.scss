@@ -32,7 +32,9 @@
         display: block;
         box-shadow: 0 2rem 6rem rgba($color: #000000, $alpha: .1);
 
-
+        @include respond(phone){
+            width: 90%;
+        }
         &:focus{
 
             border-bottom: 3px solid $color-primary-light;

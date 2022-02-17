@@ -1,14 +1,25 @@
 .row {
   max-width: $grid-width;
-//   background-color: bisque;
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+
+    @include respond(phone){
+      margin-bottom: 2rem;
+    }
   }
 
   [class^="col-"] {
-    // background-color: orangered;
     float: left;
+
+    @include respond(tab-port){
+      width: 60% !important; 
+      padding: 0;
+      margin: 3rem auto !important;
+      float: none !important;
+    
+    }
     
   }
 
