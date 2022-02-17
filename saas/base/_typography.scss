@@ -5,6 +5,10 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+
+  @include respond(tab-port){
+    padding: 0;
+  }
 }
 
 
@@ -16,6 +20,11 @@ body {
       letter-spacing: 3rem;
       text-transform: uppercase;
       animation: moveInLeft 1s;
+
+      @include respond(phone){
+        letter-spacing: 1rem;
+        font-size: 7rem;
+      }
     }
     &--sub {
       color: white;
@@ -26,6 +35,11 @@ body {
       animation: moveInRight 1s;
       display: block;
       margin-bottom: 3.5rem;
+
+      @include respond(phone){
+        letter-spacing: 1rem;
+        font-size: 1.7rem;
+      }
     }
   }
   

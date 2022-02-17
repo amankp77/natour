@@ -57,7 +57,13 @@
         z-index: 1000;
         transition: all .4s;
         // transform: scale(60);
+
+        @include respond(phone){
+            top: 2.5rem;
+            right: 2.7rem;
+        }
     }
+  
 
     &__btn{
         cursor: pointer;
@@ -75,6 +81,11 @@
 
         &:hover .navigation__icon::after{top: 1rem;}
         &:hover .navigation__icon::before{top: -1rem;}
+
+        @include respond(phone){
+            top: 2.5rem;
+            right: 2.5rem;
+        }
         
         }
 

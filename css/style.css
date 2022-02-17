@@ -5,6 +5,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   box-sizing: border-box; }
@@ -15,6 +24,9 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .header-text--main {
   color: white;
@@ -23,6 +35,10 @@ body {
   letter-spacing: 3rem;
   text-transform: uppercase;
   animation: moveInLeft 1s; }
+  @media (max-width: 37.5em) {
+    .header-text--main {
+      letter-spacing: 1rem;
+      font-size: 7rem; } }
 
 .header-text--sub {
   color: white;
@@ -33,6 +49,10 @@ body {
   animation: moveInRight 1s;
   display: block;
   margin-bottom: 3.5rem; }
+  @media (max-width: 37.5em) {
+    .header-text--sub {
+      letter-spacing: 1rem;
+      font-size: 1.7rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -692,6 +712,10 @@ body {
   right: 6.5rem;
   z-index: 1000;
   transition: all .4s; }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 2.5rem;
+      right: 2.7rem; } }
 
 .navigation__btn {
   cursor: pointer;
@@ -710,6 +734,10 @@ body {
     top: 1rem; }
   .navigation__btn:hover .navigation__icon::before {
     top: -1rem; }
+  @media (max-width: 37.5em) {
+    .navigation__btn {
+      top: 2.5rem;
+      right: 2.5rem; } }
 
 .navigation__link:link, .navigation__link:visited {
   padding: 1rem 1.5rem;
