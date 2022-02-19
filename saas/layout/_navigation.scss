@@ -1,32 +1,41 @@
-.navigation{
+.active{
 
-    &__checkbox{
-        display: none;
+    .navigation__btn:hover .navigation__icon::after{top: 0rem;}
+    .navigation__btn:hover .navigation__icon::before{top: 0rem;}
 
 
-        &:checked ~ .navigation__background{
+     .navigation__background{
         transform: scale(60);
         }
 
 
-        &:checked ~ .navigation__nav{
+        .navigation__nav{
             display: block;
             animation: fadein .5s ease;
             animation-fill-mode: forwards;
 
         }
 
-        &:checked + .navigation__btn .navigation__icon::after{
+        .navigation__btn .navigation__icon::after{
             top: 0;
             transform: rotate(-135deg);
         }
-        &:checked + .navigation__btn .navigation__icon::before{
+        .navigation__btn .navigation__icon::before{
             top: 0;
             transform: rotate(135deg);
         }
-        &:checked + .navigation__btn .navigation__icon{
+       .navigation__btn .navigation__icon{
             width: 0%;
         }
+}
+
+.navigation{
+
+    &__checkbox{
+        display: none;
+
+
+       
 
         
     }

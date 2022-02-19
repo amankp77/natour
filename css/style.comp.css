@@ -359,7 +359,7 @@ body {
       padding: 1rem 0; }
       .card__details .main-list-cont .list:last-child {
         border-bottom: none; }
-  @media (max-width: 900px), (hover: none) {
+  @media (max-width: 56.25em) {
     .card {
       border-radius: 3px;
       box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.3);
@@ -545,10 +545,6 @@ body {
 
 .form__submit {
   width: 100%; }
-
-::selection {
-  background-color: rgba(126, 213, 111, 0.8);
-  color: white; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -845,33 +841,22 @@ body {
     .popup__close:hover, .popup__close:link:hover, .popup__close:visited:hover {
       color: #7ed56f; }
 
-.active .navigation__btn:hover .navigation__icon::after {
-  top: 0rem; }
-
-.active .navigation__btn:hover .navigation__icon::before {
-  top: 0rem; }
-
-.active .navigation__background {
-  transform: scale(60); }
-
-.active .navigation__nav {
-  display: block;
-  animation: fadein .5s ease;
-  animation-fill-mode: forwards; }
-
-.active .navigation__btn .navigation__icon::after {
-  top: 0;
-  transform: rotate(-135deg); }
-
-.active .navigation__btn .navigation__icon::before {
-  top: 0;
-  transform: rotate(135deg); }
-
-.active .navigation__btn .navigation__icon {
-  width: 0%; }
-
 .navigation__checkbox {
   display: none; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(60); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    display: block;
+    animation: fadein .5s ease;
+    animation-fill-mode: forwards; }
+  .navigation__checkbox:checked + .navigation__btn .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
+  .navigation__checkbox:checked + .navigation__btn .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__btn .navigation__icon {
+    width: 0%; }
 
 .navigation__nav {
   height: 100vh;
